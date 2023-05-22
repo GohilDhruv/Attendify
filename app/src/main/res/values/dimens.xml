@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="login_logo_x_pos" >100dp</dimen>
+    <dimen name="login_logo_y_pos" >150dp</dimen>
+</resources>

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Screen"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Attendance"
+        style="@style/TextColor"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/facultySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginTop="24dp"
+        android:spinnerItemStyle="@android:style/Widget.TextView.SpinnerItem"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/divisionSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facultySpinner"
+        android:layout_marginTop="24dp"
+        android:spinnerItemStyle="@android:style/Widget.TextView.SpinnerItem"
+        android:prompt="@string/subject"
+        android:spinnerMode="dropdown"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divisionSpinner"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/downloadButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_dark"
+            android:elevation="10dp"
+            android:stateListAnimator="@null"
+            android:text="Download"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

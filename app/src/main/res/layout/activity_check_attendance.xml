@@ -1,0 +1,66 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Screen"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Check Attendance"
+        style="@style/TextColor"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/lectureSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_textview"
+        style="@style/TextColor"
+        android:layout_marginTop="32dp"
+        android:spinnerItemStyle="@style/SpinnerItemStyle"
+        android:spinnerMode="dropdown"
+        android:visibility="invisible" />
+
+    <AutoCompleteTextView
+        android:id="@+id/studentSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lectureSpinner"
+        android:layout_marginTop="24dp"
+        style="@style/TextColor"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="16sp"
+        android:hint="Student's Enrollment"
+        android:padding="8dp"
+        android:spinnerItemStyle="@style/SpinnerItemStyle"
+        android:spinnerMode="dropdown" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentSpinner"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkAttendanceButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_dark"
+            android:onClick="attendance"
+            android:elevation="10dp"
+            android:text="Check Attendance"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>
